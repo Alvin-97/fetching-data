@@ -127,7 +127,7 @@ code {
     width: 600px;
   }
 }
-@media screen and (max-width: 960) {
+@media screen and (max-width: 960px) {
   .coin-volume {
     width: 150;
   }
