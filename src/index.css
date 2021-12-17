@@ -1,13 +1,145 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.coin-app {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.coin-search,
+.loading {
+  display: grid;
+  place-content: center;
+}
+
+.coin-search h1 {
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.coin-search-input {
+  width: 280px;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.coin-search-input::placeholder {
+  color: #000;
+}
+
+.loading {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.coin-container {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-top: 2em;
+}
+.coin-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.coin {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  min-width: 300px;
+}
+
+.coin-image {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+}
+
+.coin h2 {
+  font-size: 1em;
+  width: 150px;
+  margin-right: 1em;
+}
+
+.coin p {
+  font-size: 1em;
+  margin-right: 1em;
+  text-transform: capitalize;
+  width: 100px;
+}
+.coin-data {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+.coin-price {
+  width: 100px;
+}
+
+.coin-percent {
+  width: 100px;
+}
+.coin-volume {
+  width: 250px;
+}
+.coin-market {
+  width: 250px;
+}
+
+.green {
+  color: greenyellow;
+}
+.red {
+  color: red;
+}
+
+@media screen and (max-width: 1170px) {
+  .coin-container {
+    flex-direction: column;
+  }
+  .coin h2 {
+    width: 85px;
+  }
+  .coin p {
+    width: 35px;
+  }
+
+  .coin-data {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 960) {
+  .coin-volume {
+    width: 150;
+  }
+  .coin-market {
+    display: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  .coin-volume {
+    display: none;
+  }
+  .coin-market {
+    display: none;
+  }
 }
