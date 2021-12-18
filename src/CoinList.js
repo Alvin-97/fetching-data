@@ -13,24 +13,21 @@ const CoinList = ({
 
   return (
     <div className="coin-container">
-      <div className="coin-row">
-        <div className="coin">
-          <img src={image} className="coin-image" alt={name} />
-          <h2>{name}</h2>
-          <p>{symbol}</p>
-        </div>
+      <img className="coin-image" src={image} alt={name} />
 
-        <div className="coin-data">
-          <p className="coin-price">${price}</p>
-          {priceChange < 0 ? (
-            <p className="coin-percent red">{percentage}%</p>
-          ) : (
-            <p className="coin-percent green">{percentage}%</p>
-          )}
-          <p className="coin-volume">${totalVolume.toLocaleString()}</p>
-          <p className="coin-market">{marketCap.toLocaleString()}</p>
-        </div>
+      <div className="name">
+        <h2>{name}</h2>
       </div>
+      <p className="symbol">{symbol}</p>
+
+      <p className="coin-price">${price}</p>
+      {priceChange < 0 ? (
+        <p className="coin-percent red">{percentage}%</p>
+      ) : (
+        <p className="coin-percent green">{percentage}%</p>
+      )}
+      <p className="coin-volume">${totalVolume.toLocaleString()}</p>
+      <p className="coin-market">{marketCap.toLocaleString()}</p>
     </div>
   );
 };
