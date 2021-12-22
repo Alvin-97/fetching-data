@@ -43,7 +43,6 @@ function App() {
           />
         </form>
       </div>
-
       {loading && <p className="loading">Loading...</p>}
       {searchFilter.map((coin) => {
         const {
